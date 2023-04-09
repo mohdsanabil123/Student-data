@@ -48,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'CsrfViewMiddleware',
 ]
 
 ROOT_URLCONF = 'Student_data.urls'
@@ -125,3 +124,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = 'https://student-data.up.railway.app/'
+
+CSRF_COOKIE_DOMAIN = 'https://student-data.up.railway.app/'
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
