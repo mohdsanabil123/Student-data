@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'student',
 ]
 
@@ -123,9 +124,21 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = 'https://student-data.up.railway.app/'
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ]
+}
 
-CSRF_COOKIE_DOMAIN = 'https://student-data.up.railway.app/'
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+
+
+
+# CSRF_TRUSTED_ORIGINS = 'https://student-data.up.railway.app/'
+
+# CSRF_COOKIE_DOMAIN = 'https://student-data.up.railway.app/'
+
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
