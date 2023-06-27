@@ -133,9 +133,6 @@ REST_FRAMEWORK = {
 }
 
 
-
-
-
 # CSRF_TRUSTED_ORIGINS = 'https://student-data.up.railway.app/'
 
 # CSRF_COOKIE_DOMAIN = 'https://student-data.up.railway.app/'
