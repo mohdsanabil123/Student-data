@@ -14,3 +14,5 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Student_data.settings')
 
 application = get_wsgi_application()
+
+app = application           # To deploy on vercel app
